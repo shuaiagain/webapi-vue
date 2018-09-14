@@ -50,35 +50,38 @@ export default {
 }
 
 .dialog-wrap{
-    position: fixed;
-    width:100%;
-    height: 100%;
+  position: fixed;
+  width:100%;
+  height: 100%;
 
 }
 
 .dialog-cover{
-    position:fixed;
-    height: 100%;
-    width: 100%;
-    background: #000;
-    opacity: 0.3;
-    z-index: 5;
+  position:fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.3;
+  z-index: 5;
 }
 .dialog-content{
-    position: fixed;
-    width: 40%;
-    /* min-height: 40%; */
-    left:30%;
-    top:16%;
-    background: #fff;
-    z-index: 10;
+  position: fixed;
+  width: 40%;
+  /* min-height: 40%; */
+  left:30%;
+  top:16%;
+  background: #fff;
+  z-index: 10;
 }
 
 .dialog-close{
-    cursor: pointer;
-    display: inline-block;
-    font-size: 18px;
-    width: 18px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  width: 18px;
+}
+.dialog-close:hover{
+  color: #e91e63;
 }
 
 </style>
