@@ -48,7 +48,7 @@ export default{
                 userName:this.userNameVM,
                 password:this.passwordVM
             }).then(d=>{
-                alert('ok')
+                
                 this.$emit('has-log',d.data);
             }).catch(error=>{
 

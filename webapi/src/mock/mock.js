@@ -1,7 +1,29 @@
+// 引入mockjs
 const Mock = require('mockjs')
-const login = Mock.mock('/api/login', 'post', function () {
+const login = Mock.mock('/api/login', 'post', function (data) {
+
+  let para = JSON.parse(data.body)
+  // let para = data
+
+  if (!para.userName) {
+    return {
+      Code: -400,
+      Msg: '用户名或密码错误',
+      Data: ''
+    }
+  }
+
+  if (para.userName !== 'grass' || para.password !== '1') {
+    return {
+      Code: -401,
+      Msg: '用户名或密码错误',
+      Data: ''
+    }
+  }
+
   let userInfo = {
-    ID: 1
+    UserID: 1,
+    UserName: 'grass'
   }
 
   return {

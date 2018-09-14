@@ -10,6 +10,7 @@ import PageIndex from './pages/index'
 
 import './assets/css/index.css'
 import './assets/css/common.css'
+// 引入mock.js
 require('./mock/mock.js')
 // import mock from 'mockjs'
 // import mockdata from './mock/mock.js'
