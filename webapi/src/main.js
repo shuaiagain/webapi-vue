@@ -6,7 +6,7 @@ import Layout from './components/layout'
 // import router from './router'
 import VueRouter from 'vue-router'
 
-import PageIndex from './pages/index'
+import HomeIndex from './components/index'
 
 import './assets/css/index.css'
 import './assets/css/common.css'
@@ -25,7 +25,7 @@ require.config({
 Vue.use(VueRouter)
 const routes = [{
   'path': '/',
-  component: PageIndex
+  component: HomeIndex
 }]
 
 let router = new VueRouter({

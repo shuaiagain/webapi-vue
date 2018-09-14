@@ -14,13 +14,19 @@
         </ul>
       </div>
     </div>
+
+    <div class="container">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </div>
     <!-- <router-view></router-view> -->
     <my-dialog :is-show="isShowDialog" @close-dialog="closeDialog('isShowDialog')">
       <log-form @has-log="login"></log-form>
     </my-dialog>
-    <!-- <my-dialog :is-show="isShowAboutDialog" @close-dialog="closeDialog('isShowAboutDialog')">
+    <my-dialog :is-show="isShowAboutDialog" @close-dialog="closeDialog('isShowAboutDialog')">
       <div>关于台风即将过境的问题....</div>
-    </my-dialog> -->
+    </my-dialog>
   </div>
 </template>
 <script>

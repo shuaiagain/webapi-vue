@@ -63,6 +63,8 @@ export default {
   background: #000;
   opacity: 0.3;
   z-index: 5;
+  top:0;
+  left:0;
 }
 .dialog-content{
   position: fixed;
