@@ -40,7 +40,7 @@ export default {
            isShow: true
         }
     },
-    mounted:function() {
+    mounted: function() {
 
         this.runInter();
     },
@@ -62,7 +62,7 @@ export default {
             }
         }
     },
-    methods:{
+    methods: {
         goto:function(index) {
 
             this.isShow = false;

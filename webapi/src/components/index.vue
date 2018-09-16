@@ -62,9 +62,10 @@
                 </div>
                 <div class="right-tab">
                     <div class="tab-item">
+                        
                         <div class="item-pro item-pro-odd">
                             <a class="pro-img">
-                                <!-- <img class="img-show" src="../assets/image/1.png" alt="课程"/> -->
+                                <img class="img-show" src="../assets/image/1.png" alt="课程"/>
                                 <!-- <slide-show></slide-show> -->
                             </a>
                             <div class="pro-desc">
@@ -72,6 +73,7 @@
                                 <div class="desc-mark">开放产品是一款开放产品</div>
                             </div>
                         </div>
+
                          <div class="item-pro">
                             <a class="pro-img">
                                 <img class="img-show" src="../assets/image/2.png" alt="课程"/>
@@ -93,7 +95,7 @@ export default {
     components:{
         SlideShow
     },
-    mounted: {
+    mounted: function() {
 
     },
     data(){
@@ -165,7 +167,7 @@ export default {
 }
 .item-pro{
     display: inline-block;
-    width: 380px;
+    width: 370px;
     height: 100px;
     background: #fff;
     margin-top:20px;
