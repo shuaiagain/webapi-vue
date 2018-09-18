@@ -7,6 +7,9 @@ import Layout from './components/layout'
 import VueRouter from 'vue-router'
 
 import HomeIndex from './components/index'
+import DetailPage from './components/page/detail'
+import DetailAnaPage from './components/page/detail/analysis'
+import DetailCount from './components/page/detail/count'
 
 import './assets/css/index.css'
 import './assets/css/common.css'
@@ -23,10 +26,27 @@ require.config({
 })
 
 Vue.use(VueRouter)
-const routes = [{
-  'path': '/',
-  component: HomeIndex
-}]
+const routes = [
+  {
+    'path': '/',
+    component: HomeIndex
+  },
+  {
+    'path': '/detail',
+    component: DetailPage,
+    redirect: '/detail/analysis',
+    children: [
+      {
+        'path': 'analysis',
+        component: DetailAnaPage
+      },
+      {
+        'path': 'count',
+        component: DetailCount
+      }
+    ]
+  }
+]
 
 let router = new VueRouter({
   mode: 'history',

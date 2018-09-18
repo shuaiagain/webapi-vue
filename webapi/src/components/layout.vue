@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="resetComponent()">
     <div class="app-head">
       <div class="head-about floatR">
         <a class="about-btn" @click="showAbout">关于</a>
@@ -32,6 +32,7 @@
 <script>
 import Dialog from './base/dialog.vue'
 import LoginForm from './loginform'
+import { eventBus } from '../eventBus.js'
 export default {
   components: {
     MyDialog: Dialog,
@@ -82,6 +83,10 @@ export default {
       this.isLogin = false;
       this.userName = '';
       this.userID = null;
+    },
+    resetComponent () {
+        
+        eventBus.$emit('reset-component');
     }
   }
 }
