@@ -1,17 +1,17 @@
 <template>
-    <div class="slide-show">
+    <div class="slide-show" @mouseover="clearInter()" @mouseout="runInter()">
         <div class="show-img">
-            <a class="img-wrap">
+            <a class="img-wrap" :href="slides[nowIndex].href">
                 <transition name="tran-now" >
-                    <img class="img-now" src=""  alt="" v-if="isShow"/>
+                    <img class="img-now" :src="slides[nowIndex].src"  alt="" v-if="isShow"/>
                 </transition>
                 <transition name="tran-old">
-                    <img class="img-old" src="" alt="" v-if="!isShow"/>
+                    <img class="img-old" :src="slides[nowIndex].src" alt="" v-if="!isShow"/>
                 </transition>
             </a>
         </div>
         <div class="show-pages">
-            <ul>
+            <ul class="pages-tab">
                 <li @click="goto(prevIndex)">&lt;</li>
                 <li v-for="(item,index) in slides" @click="goto(index)">
                     {{index+1}}
@@ -86,4 +86,52 @@ export default {
 </script>
 <style scoped>
 
+.tran-now-enter-active{
+    transition: all 0.5s ease;
+}
+
+.tran-now-enter{
+    transform: translateX(900px);
+}
+
+/* .tran-old-leave{
+    transition:all 0.5s; 
+    transform: translateX(-900px);
+} */
+
+.tran-old-leave-active{
+    transition:all 0.5s; 
+    transform: translateX(-900px);
+}
+
+.slide-show{
+  position: relative;
+  margin: 15px 15px 15px 0;
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+}
+.slide-img {
+  width: 100%;
+}
+.slide-img img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.show-pages{
+    position: absolute;
+    bottom:10px;
+    right: 0px;
+}
+.pages-tab li{
+    float: left;
+    width: 20px;
+    text-align: center;
+    color:#fff;
+    font-size: 15px;
+}
+.pages-tab li:hover{
+    background: #bbb;
+}
 </style>

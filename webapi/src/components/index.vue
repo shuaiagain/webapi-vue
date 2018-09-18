@@ -57,7 +57,8 @@
             <div class="home-right floatR">
                 <div class="right-pic">
                     <a class="pic-slide">
-                        <img class="slide-show" src="../assets/image/slideShow/pic1.jpg" alt="课程"/>
+                        <!-- <img class="slide-show" src="../assets/image/slideShow/pic1.jpg" alt="课程"/> -->
+                        <slide-show :slides="slides"></slide-show>
                     </a>
                 </div>
                 <div class="right-tab">
@@ -66,7 +67,7 @@
                         <div class="item-pro item-pro-odd">
                             <a class="pro-img">
                                 <img class="img-show" src="../assets/image/1.png" alt="课程"/>
-                                <!-- <slide-show></slide-show> -->
+                              
                             </a>
                             <div class="pro-desc">
                                 <div class="desc-name">开发产品</div>
@@ -101,7 +102,28 @@ export default {
     data(){
 
         return {
-            slides:[]
+            slides:[
+                 {
+                    src: require('../assets/image/slideShow/pic1.jpg'),
+                    title: 'xxx1',
+                    href: 'detail/analysis'
+                },
+                {
+                    src: require('../assets/image/slideShow/pic2.jpg'),
+                    title: 'xxx2',
+                    href: 'detail/count'
+                },
+                {
+                    src: require('../assets/image/slideShow/pic3.jpg'),
+                    title: 'xxx3',
+                    href: 'http://xxx.xxx.com'
+                },
+                {
+                    src: require('../assets/image/slideShow/pic4.jpg'),
+                    title: 'xxx4',
+                    href: 'detail/forecast'
+                }
+            ]
         }
     },
     methods:{
